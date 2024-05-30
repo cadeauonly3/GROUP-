@@ -1,0 +1,44 @@
+
+<script>
+    function buy(){
+       type=document.getElementById("type").value; 
+       item=document.getElementById("item").value;
+       if(type==='mtype'){
+        price=10000;
+        tot=item*price;
+        document.write(`<fieldset>`);
+        document.write(`Price: ${price}<br>`);
+        document.write(`type: ${type}<br>`);
+        document.write(`Item: ${item}<br>`);
+        document.write(`Total Price: ${tot}`);
+        document.write(`</fieldset>`);
+        document.write('<br><br>');
+        document.write(`<button onclick="window.print()">Print</button>`);
+       }
+       else if(type==='wtype'){
+        price=20000;
+        tot=item*price;
+        document.write(`<fieldset>`);
+        document.write(`Price: ${price}<br>`);
+        document.write(`type: ${type}<br>`);
+        document.write(`Item: ${item}<br>`);
+        document.write(`Total Price: ${tot}`);
+        document.write(`</fieldset>`);
+        document.write('<br><br>');
+        document.write(`<button onclick="window.print()">Print</button>`);
+       }
+    }
+</script><head>
+
+</head>
+<body>
+type: <select name="" id="type">
+    <option value="mtype">M Type</option>
+    <option value="wtype">W Type</option>
+</select><br><br>
+items: <select name="" id="item">
+    <option value="1">1</option>
+    <option value="2">2</option>
+</select><br><br>
+<button onclick="buy()">submit</button>
+</body>

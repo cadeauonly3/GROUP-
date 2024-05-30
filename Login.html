@@ -1,0 +1,98 @@
+<html>
+    <head>
+          <link rel="stylesheet" href="fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">
+    <style type="text/css">
+    body{
+        background-image: url(images/heaven.jpg);
+        background-size: 100%;
+      }
+    ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: whitesmoke;
+      margin-top: 132px;
+    }
+    li{
+      float: left;
+    }
+    li a{
+      display: block;
+      text-align: center;
+      padding: 13px 15px;
+      text-decoration: none;
+    }
+    li a:hover {
+background-color: grey;
+    }
+    .dropdown-content{
+      display: none;
+      background-color: blue;
+    }
+    .dropdown-content a{
+        color: black;
+        padding: 13px 15px;
+        border: 1px solid#grey;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover{
+      background-color: #f1f1f1;
+    }
+    .dropdown:hover.dropdown-content{
+      display: inline;
+    }
+   h1{
+        text-align: center;
+        color: blue;
+        background-color: whitesmoke;
+        font-size: 80px;
+        font-style:italic;
+        border-radius: 17px;
+       }
+       table{
+        background-color: black;
+        text-align: center;
+       }
+       td{
+        color: red;
+       }
+  </style>
+    </head>
+    <body>
+        <form id="a">
+            <table border="1">
+            <tr><td><h1>Login</h1>
+            <input id="a1"><br><br>
+            <input id="a2"><br><br>
+            <button>login</button></td></tr>
+            <script>
+                document.getElementById('a').addEventListener('submit',function(Event){
+                    event.preventDefault();
+                    username=document.getElementById("a1").value;
+                    password=document.getElementById("a2").value;
+                    if (username==="manager" && password==="Manager@5") {
+                        window.location.href="manager.html";
+						sessionStorage.setItem("loggedIn","true");
+						sessionStorage.setItem("username",username);
+                    }
+                   else if (username==="secretary" && password==="Secretary@9") {
+                    window.location.href="secret.html";
+					sessionStorage.setItem("loggedIn","true");
+					sessionStorage.setItem("username",username);
+                    }
+                  else if(username==="customer" && password==="Customer@6"){
+                   window.location.href="Form.html";
+                   sessionStorage.setItem("loggedIn","true");
+                   sessionStorage.setItem("username",username);
+                  }
+                    else{
+                        alert("Invalid message");
+                    }
+                });
+            </script>
+             </table>
+        </form>        
+    </body>
+</html>
